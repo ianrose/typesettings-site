@@ -6,6 +6,6 @@
     "modernizr": "~2.7"
   },
   "devDependencies": {
-    "typesettings": "~1.1.4-beta"
+    "typesettings": "~1.1.5"
   }
 }
