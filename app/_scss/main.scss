@@ -2,8 +2,6 @@
 @import "reset";
 
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -128,9 +126,6 @@ a {
   border-radius: 4px;
   text-decoration: none;
   font-family: $font-sans;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   border-style: solid;
   border-color: #fff;
