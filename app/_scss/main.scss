@@ -1,10 +1,12 @@
 @charset "UTF-8";
-@import "reset";
 
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
+// ---------------------
+// Settings for Typesettings
+// ---------------------
 $font-sans: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-serif: Georgia, 'Times New Roman', serif;
 $font-mono: 'Lucida Console', Monaco, monospace;
@@ -16,16 +18,28 @@ $ms-ratio: 1.414;
 $paragraph-indent: false;
 $paragraph-justify: true;
 
+// ---------------------
+// Sass file Imports
+// ---------------------
+@import "reset";
 @import "../_bower_components/typesettings/typesettings";
 @import "logo-icon";
+@import "gists";
 
+// ---------------------
+// Project Vars
+// ---------------------
 $brand-color: #c85557;
 
-h1, .h2, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+// ---------------------
+// Project Styles
+// ---------------------
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: #000;
 }
 
-.header-container, .footer-container {
+.header-container,
+.footer-container {
   background-color: $brand-color;
   color: #000;
   font-family: $font-sans;
@@ -132,14 +146,44 @@ a {
   @include rhythmBorder(2px, 3);
 }
 
+a.button:hover {
+  text-decoration: none;
+}
+
 .button-default {
   border-color: #fff;
   color: #fff;
+
+  &:hover,
+  &:active {
+    color: $brand-color;
+  }
+
+  &:hover {
+    background-color: #fff;
+  }
+
+  &:active {
+    background-color: darken(#fff, 10%);
+  }
 }
 
 .button-primary {
   border-color: #000;
   color: #000;
+
+  &:hover,
+  &:active {
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: #000;
+  }
+
+  &:active {
+    background-color: lighten(#000, 20%);
+  }
 }
 
 .main-container {
@@ -194,25 +238,7 @@ code {
   }
 }
 
+// Font Awesome styles
 .fa {
   margin-left: emRhythm(0.5);
-}
-
-.gist {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: emRhythm(4, $ms-down1);
-  @include setType(3, $ms-down1);
-}
-
-.gist .gist-file {
-  margin-bottom: 0 !important;
-}
-
-.gist .gist-file .gist-data {
-  border: none !important;
-}
-
-.gist .gist-file .gist-meta {
-  display: none !important;
 }
