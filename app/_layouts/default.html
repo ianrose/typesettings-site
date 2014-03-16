@@ -7,7 +7,11 @@
     <meta name="description" content="Typesettings - A Sass toolkit that sets type in Ems based on modular scale, vertical rhythm, and responsive ratio based headlines.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="http://typesettings.io{{ page.url }}"/>
-
+    <script>
+        if (window.location.href.indexOf('http://ianrose.github.io') === 0) {
+            window.location.href = 'http://typesettings.io{{ page.url }}';
+        }
+    </script>
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
     <!-- build:css({app,.tmp}) css/main.css -->
