@@ -4,86 +4,89 @@ title: Typesettings | Home
 ---
 
 <article>
-  <header>
-    <h2>A Sass Type Toolkit</h2>
+    <header>
+        <h2>A Sass Type Toolkit</h2>
 
-    <p>Set your type in Ems with modular scale, vertical rhythm, and responsive ratio based headlines using Sass.
-      <strong>Why create another type toolkit in Sass?</strong> I wanted to and I couldn&#8217;t find exactly what I
-      was looking for. Typesettings uses techniques from many different amazing tools while trying to keep it
-      simple.
-    </p>
-    <ul>
-      <li>Its only dependency is Sass</li>
-      <li>It uses Ems for type not REMs or pixels</li>
-      <li>It handles all the math for Ems including the compounding</li>
-      <li>It maintains vertical rhythm with pixel based borders using padding set in Ems</li>
-      <li>It comes with a default 6px baseline to maintain rhythm on all block elements</li>
-      <li>It relies more on using Sass functions combined with vanilla CSS rules rather than mixins to style</li>
-      <li>It uses modular scale values to set font-size</li>
-      <li>It provides settings for adjusting headlines based on screen width</li>
-    </ul>
-  </header>
-  <section>
+        <p>Set your type in Ems with modular scale, vertical rhythm, and responsive ratio based headlines using Sass.
+            <strong>Why create another type toolkit in Sass?</strong> I wanted to and I couldn&#8217;t find exactly what I
+            was looking for. Typesettings uses techniques from many different amazing tools while trying to keep it
+            simple.
+        </p>
+        <ul>
+            <li>Its only dependency is Sass</li>
+            <li>It uses Ems for type not REMs or pixels</li>
+            <li>It handles all the math for Ems including the compounding</li>
+            <li>It maintains vertical rhythm with pixel based borders using padding set in Ems</li>
+            <li>It comes with a default 6px baseline to maintain rhythm on all block elements</li>
+            <li>It relies more on using Sass functions combined with vanilla CSS rules rather than mixins to style</li>
+            <li>It uses modular scale values to set font-size</li>
+            <li>It provides settings for adjusting headlines based on screen width</li>
+        </ul>
+    </header>
+    <section>
 
-    <h3>How to setup</h3>
-    <p>There are three ways you can download Typesettings.</p>
-    <ul>
-      <li><a href="https://github.com/ianrose/typesettings/releases/latest">Download the latest release</a></li>
-      <li>Clone the repo: <code>git clone https://github.com/ianrose/typesettings.git</code></li>
-      <li>Install with <a href="http://bower.io/">Bower</a>: <code>bower install typesettings --save-dev</code></li>
-    </ul>
-    <p>To start using Typesettings <code>@import</code> the
-      <code>_typesettings.scss</code> partial into your Sass project after your CSS reset.</p>
+        <h3>How to setup</h3>
 
-    <script src="https://gist.github.com/ianrose/9042257.js"></script>
-  </section>
-  <section>
+        <p>There are three ways you can download Typesettings.</p>
+        <ul>
+            <li><a href="https://github.com/ianrose/typesettings/releases/latest">Download the latest release</a></li>
+            <li>Clone the repo: <code>git clone https://github.com/ianrose/typesettings.git</code></li>
+            <li>Install with <a href="http://bower.io/">Bower</a>: <code>bower install typesettings --save-dev</code>
+            </li>
+        </ul>
+        <p>To start using Typesettings <code>@import</code> the
+            <code>_typesettings.scss</code> partial into your Sass project after your CSS reset.</p>
 
-    <h3>How to use</h3>
+        <script src="https://gist.github.com/ianrose/9042257.js"></script>
+    </section>
+    <section>
 
-    <p>After Typesettings is setup in your project the default type styles should be looking good. However I bet
-      you want to use modular scale and vertical rhythm in the rest of your project. Here is an example of how to
-      do that:</p>
-    <h4>The Scss:</h4>
+        <h3>How to use</h3>
 
-    <script src="https://gist.github.com/ianrose/9042508.js"></script>
+        <p>After Typesettings is setup in your project the default type styles should be looking good. However I bet
+            you want to use modular scale and vertical rhythm in the rest of your project. Here is an example of how to
+            do that:</p>
+        <h4>The Scss:</h4>
 
-    <div class="limit-measure">
-      <h4>The outputted CSS:</h4>
-    </div>
-    <script src="https://gist.github.com/ianrose/9042515.js"></script>
+        <script src="https://gist.github.com/ianrose/9042508.js"></script>
 
-    <p>You can also look at the <a href="https://github.com/ianrose/typesettings-site">source code of
-      this site</a> to see how it was made using Typesettings.</p>
-  </section>
-  <section>
-    <h3>Requirements</h3>
+        <div class="limit-measure">
+            <h4>The outputted CSS:</h4>
+        </div>
+        <script src="https://gist.github.com/ianrose/9042515.js"></script>
 
-    <p>Sass, that&#8217;s it.</p>
+        <p>You can also look at the <a href="https://github.com/ianrose/typesettings-site">source code of
+            this site</a> to see how it was made using Typesettings.</p>
+    </section>
+    <section>
+        <h3>Requirements</h3>
 
-  </section>
-  <section>
-    <h3>Precision</h3>
+        <p>Sass, that&#8217;s it.</p>
 
-    <p>Typesettings uses relative units and many of the values outputted are a result of dividing and multiplying.
-      So a computed pixel value like
-      <code>17.999999px</code> will sometimes happen.</p>
-  </section>
-  <section>
-    <h3>Thanks and Resources</h3>
-    <ul>
-      <li><a href="http://type-scale.com/">Type-scale.com</a></li>
-      <li><a href="https://github.com/typeplate/typeplate.github.io">Typeplate</a></li>
-      <li><a href="https://github.com/csswizardry/typecsset">Typecsset</a></li>
-      <li><a href="https://github.com/chriseppstein/compass">Compass</a></li>
-    </ul>
-  </section>
-  <section>
-    <h3>License</h3>
+    </section>
+    <section>
+        <h3>Precision</h3>
 
-    <p><a href="https://github.com/ianrose/typesettings/blob/master/LICENSE">The MIT License (MIT)</a></p>
-  </section>
-  <section>
-    <p class="to-top"><a href="#top" class="button button-primary">Back to Top</a></p>
-  </section>
+        <p>Typesettings uses relative units and many of the values outputted are a result of dividing and multiplying.
+            So a computed pixel value like
+            <code>17.999999px</code> will sometimes happen.</p>
+    </section>
+    <section>
+        <h3>Thanks and Resources</h3>
+        <ul>
+            <li><a href="http://type-scale.com/">Type-scale.com</a></li>
+            <li><a href="https://github.com/typeplate/typeplate.github.io">Typeplate</a></li>
+            <li><a href="https://github.com/csswizardry/typecsset">Typecsset</a></li>
+            <li><a href="https://github.com/chriseppstein/compass">Compass</a></li>
+            <li><a href="http://sass.fffunction.co/">Sassaparilla</a></li>
+        </ul>
+    </section>
+    <section>
+        <h3>License</h3>
+
+        <p><a href="https://github.com/ianrose/typesettings/blob/master/LICENSE">The MIT License (MIT)</a></p>
+    </section>
+    <section>
+        <p class="to-top"><a href="#top" class="button button-primary">Back to Top</a></p>
+    </section>
 </article>
