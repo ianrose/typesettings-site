@@ -202,6 +202,7 @@ article {
       border-color: lighten(#000, 80%);
       border-bottom-style: solid;
       margin-bottom: emRhythm(8);
+      height: 0;
       @include rhythmBorderBottom(1px, 4);
     }
   }

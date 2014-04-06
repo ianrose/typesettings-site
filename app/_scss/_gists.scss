@@ -6,11 +6,16 @@
   @include setType(3, $ms-down1);
 }
 
+.gist .line-numbers {
+  padding: emRhythm(1, $ms-down1) !important;
+}
+
 .gist .gist-file {
   margin-bottom: 0 !important;
 }
 
-.gist .gist-file .gist-data {
+.gist .gist-file .gist-data,
+.gist-file {
   border: none !important;
 }
 
