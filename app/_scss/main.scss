@@ -10,13 +10,13 @@
 $font-sans: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-serif: Georgia, 'Times New Roman', serif;
 $font-mono: 'Lucida Console', Monaco, monospace;
-$text-color: lighten(#000, 35%);
+$text-color: #333;
 $base-vertical-unit: 6px;
-$base-line-multi: 4;
-$base-font-size: 16px;
+$base-line-multi: 5;
+$base-font-size: 17px;
 $ms-ratio: 1.414;
 $paragraph-indent: false;
-$paragraph-justify: true;
+$paragraph-justify: false;
 
 // ---------------------
 // Sass file Imports
@@ -29,24 +29,20 @@ $paragraph-justify: true;
 // ---------------------
 // Project Vars
 // ---------------------
-$brand-color: #c85557;
+$brand-color: #fff;
 
 // ---------------------
 // Project Styles
 // ---------------------
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  color: #000;
-}
-
 .header-container,
 .footer-container {
   background-color: $brand-color;
-  color: #000;
+  color: $text-color;
   font-family: $font-sans;
   text-align: center;
 
   a {
-    color: #fff;
+    color: $text-color;
 
     &:link, &:active {
       text-decoration: none;
@@ -99,7 +95,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 a {
-  color: $brand-color;
+  color: $text-color;
 
   &:link, &:active {
     text-decoration: none;
@@ -113,7 +109,6 @@ a {
 .logo {
   font-family: $font-sans;
   text-transform: uppercase;
-  color: #000;
 }
 
 .icon-logo {
@@ -142,7 +137,7 @@ a {
   font-family: $font-sans;
   user-select: none;
   border-style: solid;
-  border-color: #fff;
+  border-color: $text-color;
   @include rhythmBorder(2px, 3);
 }
 
@@ -151,16 +146,16 @@ a.button:hover {
 }
 
 .button-default {
-  border-color: #fff;
-  color: #fff;
+  border-color: $text-color;
+  color: $text-color;
 
   &:hover,
   &:active {
-    color: $brand-color;
+    color: #fff;
   }
 
   &:hover {
-    background-color: #fff;
+    background-color: $text-color;
   }
 
   &:active {
@@ -169,8 +164,8 @@ a.button:hover {
 }
 
 .button-primary {
-  border-color: #000;
-  color: #000;
+  border-color: $text-color;
+  color: $text-color;
 
   &:hover,
   &:active {
@@ -178,7 +173,7 @@ a.button:hover {
   }
 
   &:hover {
-    background-color: #000;
+    background-color: $text-color;
   }
 
   &:active {
@@ -206,6 +201,12 @@ article {
       @include rhythmBorderBottom(1px, 4);
     }
   }
+}
+
+article {
+  border-top-color: $text-color;
+  border-top-style: solid;
+  @include rhythmBorderTop(12px, 4);
 }
 
 code {
