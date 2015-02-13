@@ -183,7 +183,7 @@ a.button:hover {
 
 .main-container {
   padding: 0 emRhythm(3);
-  max-width: emRhythm(96);
+  max-width: emRhythm(110);
   margin-left: auto;
   margin-right: auto;
 }
@@ -207,6 +207,10 @@ article {
   border-top-color: $text-color;
   border-top-style: solid;
   @include rhythmBorderTop(12px, 4);
+
+  p {
+    max-width: none;
+  }
 }
 
 code {
