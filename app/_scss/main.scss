@@ -248,3 +248,18 @@ code {
 .fa {
   margin-left: emRhythm(0.5);
 }
+
+.main-heading {
+  margin-bottom: emRhythm(4, $ms-up1);
+  @include setType(5, $ms-up1);
+
+  @media (min-width: 43.75em) {
+    margin-bottom: emRhythm(4, $ms-up2);
+    @include setType(6, $ms-up2)
+  }
+
+  @media (min-width: 56.25em) {
+    margin-bottom: emRhythm(4, $ms-up3);
+    @include setType(8, $ms-up3);
+  }
+}
