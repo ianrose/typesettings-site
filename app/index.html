@@ -36,7 +36,7 @@ title: Typesettings | Home
   </header>
   <section>
 
-    <h3>How to setup</h3>
+    <h3 id="how-to-setup">How to setup</h3>
 
     <p>You can either use the Sass versison or the Stylus version. There are
       three ways you can download both versions of Typesettings.</p>
@@ -69,7 +69,7 @@ title: Typesettings | Home
   </section>
   <section>
 
-    <h3>How to use</h3>
+    <h3 id="how-to-use">How to use</h3>
 
     <p>After Typesettings is setup in your project the default type styles
       should be looking good. However I bet
@@ -94,13 +94,37 @@ title: Typesettings | Home
         this site</a> to see how it was made using Typesettings.</p>
   </section>
   <section>
-    <h3>Requirements</h3>
+    <h3 id="requirements">Requirements</h3>
 
     <p>Sass or Stylus, that&#8217;s it.</p>
 
   </section>
   <section>
-    <h3>Precision</h3>
+    <h3 id="functions">Functions</h3>
+    <p>Internally Typesettings uses some utility functions, which if you have a need use them. It also contains functions that can and should be used for setting type. Typesettings will warn you if a value will not result in a rhythm friendly value. If you would like to “silent” the warning you can pass the argument <code>$silent: true</code>.</p>
+    <p>The Sass function <code>emRhythm</code> returns an <strong>EM value</strong> that is a multiple of our defined base vertical unit. For example 3 becomes <code>1.125em</code></p>
+    <script src="https://gist.github.com/ianrose/44114c77b482b7804d3a831f1ff35322.js"></script>
+    <p>The Sass function <code>unitlessRhythm</code> returns a <strong>unitless number</strong> that is a multiple of our defined base vertical unit. For example 3 becomes <code>1.125</code></p>
+    <script src="https://gist.github.com/ianrose/d6b31ef1c3cb21823c93c420a75f908f.js"></script>
+  </section>
+  <section>
+    <h3 id="mixins">Mixins</h3>
+    <p>Typesettings provides a number of helpful typesetting and vertical spacing mixins. Typesettings will warn you if a value will not result in a rhythm friendly value. If you would like to “silent” the warning you can pass the argument <code>$silent: true</code></p>
+    <p>The mixin <code>setType</code> sets the type in <strong>EMs</strong> and makes a vertical rhythm <strong>unitless line-height</strong> that is based on context.</p>
+    <script src="https://gist.github.com/ianrose/690beb25696a22dd16494a807b748e57.js"></script>
+    <p>The mixin <code>setLeading</code> creates a vertical rhythm <strong>unitless line-height</strong> that is based on context.</p>
+    <script src="https://gist.github.com/ianrose/d04edb177305d37ff4a3137d8eb35096.js"></script>
+    <p>The mixin <code>rhythmBorderTop</code> creates a <strong>pixel</strong> width border top with padding that is a multiple of the base vertical grid unit. You will need to set border style and color rules.</p>
+    <script src="https://gist.github.com/ianrose/7db4ce58851a9b02d14e023341dd7efa.js"></script>
+    <p>The mixin <code>rhythmBorderBottom</code> creates a <strong>pixel</strong> width border bottom with padding that is a multiple of the base vertical grid unit. You will need to set border style and color rules.</p>
+    <script src="https://gist.github.com/ianrose/9e63238ce0eaf410924f7f2a859737fe.js"></script>
+    <p>The mixin <code>rhythmBorder</code> creates a <strong>pixel</strong> width border with padding that is a multiple of the base vertical grid unit. You will need to set border style and color rules</p>
+    <script src="https://gist.github.com/ianrose/8ae99a0b0dfe673632edd10512592df2.js"></script>
+    <p>The mixin <code>debug-vertical-alignment</code> creates base type baseline overlay and vertical unit overlay. To use on the body tag for example: <code>body { @include debug-vertical-alignment(); }</code> and add class <code>va-debug</code> to the body tag</p>
+    <script src="https://gist.github.com/ianrose/6b61ed69911467e0e598e9a322e3a627.js"></script>
+  </section>
+  <section>
+    <h3 id="precision">Precision</h3>
 
     <p>Typesettings uses relative units and many of the values outputted are a
       result of dividing and multiplying.
@@ -108,7 +132,7 @@ title: Typesettings | Home
       <code>17.999999px</code> will sometimes happen.</p>
   </section>
   <section>
-    <h3>Thanks and Resources</h3>
+    <h3 id="thanks-and-resources">Thanks and Resources</h3>
     <ul>
       <li><a href="https://github.com/johngerome">@johngerom</a>:
         <a href="https://github.com/ianrose/typesettings/blob/master/_typesettings.styl">Stylus version</a></li>
@@ -122,7 +146,7 @@ title: Typesettings | Home
     </ul>
   </section>
   <section>
-    <h3>License</h3>
+    <h3 id="license">License</h3>
 
     <p><a href="https://github.com/ianrose/typesettings/blob/master/LICENSE">The
       MIT License (MIT)</a></p>

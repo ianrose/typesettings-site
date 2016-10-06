@@ -10,13 +10,16 @@
   padding: emRhythm(1, $ms-down1) !important;
 }
 
-.gist .gist-file {
-  margin-bottom: 0 !important;
+.gist-file {
+  margin-bottom: emRhythm(1, $ms-down1) !important;
 }
 
 .gist .gist-file .gist-data,
 .gist-file {
-  border: none !important;
+  border-top: 1px #eeeeee solid !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 1px #eeeeee solid !important;
 }
 
 .gist .gist-file .gist-meta {
