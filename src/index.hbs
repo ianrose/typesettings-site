@@ -1,0 +1,161 @@
+---
+title: Typesettings | Home
+---
+{{#extend "layout"}}
+  {{#content "main"}}
+    <article>
+      <header>
+        <h2 class="main-heading">A Sass and Stylus Toolkit for Setting Type</h2>
+
+        <p>Set your type in Ems with modular scale, vertical rhythm, and responsive
+          ratio based headlines using Sass or Stylus.
+          <strong>Why create another type toolkit?</strong> I wanted to and I couldn&#8217;t
+          find exactly what I
+          was looking for. Typesettings uses techniques from many different amazing
+          tools while trying to keep it
+          simple.
+        </p>
+        <ul>
+          <li>Its only dependency is Sass or Stylus</li>
+          <li>It uses Ems for type not REMs or pixels</li>
+          <li>It handles all the math for Ems including the compounding</li>
+          <li>It maintains vertical rhythm with pixel based borders using padding
+            set in Ems
+          </li>
+          <li>It comes with a default 6px baseline to maintain rhythm on all block
+            elements
+          </li>
+          <li>It relies more on using functions combined with vanilla CSS rules
+            rather than mixins to style
+          </li>
+          <li>It uses modular scale values to set font-size</li>
+          <li>It has optional default type styles that includes settings for
+            adjusting headlines based on screen width
+          </li>
+        </ul>
+      </header>
+      <section>
+
+        <h3 id="how-to-setup">How to setup</h3>
+
+        <p>You can either use the Sass versison or the Stylus version. There are
+          three ways you can download both versions of Typesettings.</p>
+
+        <ul>
+          <li><a href="https://github.com/ianrose/typesettings/releases/latest">Download
+            the latest release</a></li>
+          <li>Clone the repo: <code>git clone
+            https://github.com/ianrose/typesettings.git</code></li>
+          <li>Install with <a href="http://bower.io/">Bower</a>: <code>bower install
+            typesettings --save-dev</code>
+          </li>
+        </ul>
+
+        <h4>Setup Sass</h4>
+
+        <p>To start using Typesettings <code>@import</code> the
+          <code>_typesettings.scss</code> partial into your Sass project after your
+          CSS reset.</p>
+
+        <script src="https://gist.github.com/ianrose/9042257.js"></script>
+
+        <h4>Setup Stylus</h4>
+
+        <p>To start using Typesettings <code>@import</code> the
+          <code>_typesettings.styl</code> partial into your Stylus project after
+          your CSS reset.</p>
+
+        <script src="https://gist.github.com/ianrose/e32798649c6cf49765b4.js"></script>
+      </section>
+      <section>
+
+        <h3 id="how-to-use">How to use</h3>
+
+        <p>After Typesettings is setup in your project the default type styles
+          should be looking good. However I bet
+          you want to use modular scale and vertical rhythm in the rest of your
+          project. Here is an example of how to
+          do that:</p>
+        <h4>The SCSS:</h4>
+
+        <script src="https://gist.github.com/ianrose/9042508.js"></script>
+
+        <h4>The Stylus:</h4>
+
+        <script src="https://gist.github.com/ianrose/ae516180f50f9c179d3a.js"></script>
+
+        <div class="limit-measure">
+          <h4>The generated CSS:</h4>
+        </div>
+        <script src="https://gist.github.com/ianrose/9042515.js"></script>
+
+        <p>You can also look at the
+          <a href="https://github.com/ianrose/typesettings-site">source code of
+            this site</a> to see how it was made using Typesettings.</p>
+      </section>
+      <section>
+        <h3 id="requirements">Requirements</h3>
+
+        <p>Sass or Stylus, that&#8217;s it.</p>
+
+      </section>
+      <section>
+        <h3 id="functions">Functions</h3>
+        <p>Internally Typesettings uses some utility functions, which if you have a need use them. It also contains functions that can and should be used for setting type. Typesettings will warn you if a value will not result in a rhythm friendly value. If you would like to “silent” the warning you can pass the argument <code>$silent: true</code>.</p>
+        <p>The Sass function <code>emRhythm</code> returns an <strong>EM value</strong> that is a multiple of our defined base vertical unit. For example 3 becomes <code>1.125em</code></p>
+        <script src="https://gist.github.com/ianrose/44114c77b482b7804d3a831f1ff35322.js"></script>
+        <p>The Sass function <code>unitlessRhythm</code> returns a <strong>unitless number</strong> that is a multiple of our defined base vertical unit. For example 3 becomes <code>1.125</code></p>
+        <script src="https://gist.github.com/ianrose/d6b31ef1c3cb21823c93c420a75f908f.js"></script>
+      </section>
+      <section>
+        <h3 id="mixins">Mixins</h3>
+        <p>Typesettings provides a number of helpful typesetting and vertical spacing mixins. Typesettings will warn you if a value will not result in a rhythm friendly value. If you would like to “silent” the warning you can pass the argument <code>$silent: true</code></p>
+        <p>The mixin <code>setType</code> sets the type in <strong>EMs</strong> and makes a vertical rhythm <strong>unitless line-height</strong> that is based on context.</p>
+        <script src="https://gist.github.com/ianrose/690beb25696a22dd16494a807b748e57.js"></script>
+        <p>The mixin <code>setLeading</code> creates a vertical rhythm <strong>unitless line-height</strong> that is based on context.</p>
+        <script src="https://gist.github.com/ianrose/d04edb177305d37ff4a3137d8eb35096.js"></script>
+        <p>The mixin <code>rhythmBorderTop</code> creates a <strong>pixel</strong> width border top with padding that is a multiple of the base vertical grid unit. You will need to set border style and color rules.</p>
+        <script src="https://gist.github.com/ianrose/7db4ce58851a9b02d14e023341dd7efa.js"></script>
+        <p>The mixin <code>rhythmBorderBottom</code> creates a <strong>pixel</strong> width border bottom with padding that is a multiple of the base vertical grid unit. You will need to set border style and color rules.</p>
+        <script src="https://gist.github.com/ianrose/9e63238ce0eaf410924f7f2a859737fe.js"></script>
+        <p>The mixin <code>rhythmBorder</code> creates a <strong>pixel</strong> width border with padding that is a multiple of the base vertical grid unit. You will need to set border style and color rules</p>
+        <script src="https://gist.github.com/ianrose/8ae99a0b0dfe673632edd10512592df2.js"></script>
+        <p>The mixin <code>debug-vertical-alignment</code> creates base type baseline overlay and vertical unit overlay. To use on the body tag for example: <code>body { @include debug-vertical-alignment(); }</code> and add class <code>va-debug</code> to the body tag</p>
+        <script src="https://gist.github.com/ianrose/6b61ed69911467e0e598e9a322e3a627.js"></script>
+      </section>
+      <section>
+        <h3 id="precision">Precision</h3>
+
+        <p>Typesettings uses relative units and many of the values outputted are a
+          result of dividing and multiplying.
+          So a computed pixel value like
+          <code>17.999999px</code> will sometimes happen.</p>
+      </section>
+      <section>
+        <h3 id="thanks-and-resources">Thanks and Resources</h3>
+        <ul>
+          <li><a href="https://github.com/johngerome">@johngerom</a>:
+            <a href="https://github.com/ianrose/typesettings/blob/master/_typesettings.styl">Stylus version</a></li>
+          <li><a href="http://type-scale.com/">Type-scale.com</a></li>
+          <li>
+            <a href="https://github.com/typeplate/typeplate.github.io">Typeplate</a>
+          </li>
+          <li><a href="https://github.com/csswizardry/typecsset">Typecsset</a></li>
+          <li><a href="https://github.com/chriseppstein/compass">Compass</a></li>
+          <li><a href="http://sass.fffunction.co/">Sassaparilla</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3 id="license">License</h3>
+
+        <p><a href="https://github.com/ianrose/typesettings/blob/master/LICENSE">The
+          MIT License (MIT)</a></p>
+      </section>
+      <section>
+        <p class="to-top"><a href="#top" class="button button-primary">Back to
+          Top</a></p>
+      </section>
+    </article>
+
+  {{/content}}
+{{/extend}}
