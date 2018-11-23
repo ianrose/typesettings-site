@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+     <script>
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'has-js ';
+    </script>
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Typesettings - A Sass toolkit that sets type in Ems based on modular scale, vertical rhythm, and responsive ratio based headlines.">
+    <meta name="keywords" content="Sass, Typography, Stylus, Web Type">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="/static/images/apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/static/images/apple-touch-icon-57x57-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/images/apple-touch-icon-72x72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/images/apple-touch-icon-114x114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/images/apple-touch-icon-144x144-precomposed.png" />
+
+    <!-- Stylesheets -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body id="top">
+    <!-- Built @ {{isoDate}} -->
+    {{> header}}
+    <div class="main-container">
+      <div class="main wrapper">
+        {{#block "main"}}
+
+        {{/block}}
+      </div>
+    </div>
+    {{> footer}}
+    {{> analytics}}
+    <script src="/js/index.js"></script>
+  </body>
+</html>

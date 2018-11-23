@@ -1,0 +1,27 @@
+// Custom styles for GitHub Gist embeds
+.gist {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: emRhythm(4, $ms-down1);
+  @include setType(3, $ms-down1);
+}
+
+.gist .line-numbers {
+  padding: emRhythm(1, $ms-down1) !important;
+}
+
+.gist-file {
+  margin-bottom: emRhythm(1, $ms-down1) !important;
+}
+
+.gist .gist-file .gist-data,
+.gist-file {
+  border-top: 1px #eeeeee solid !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 1px #eeeeee solid !important;
+}
+
+.gist .gist-file .gist-meta {
+  display: none !important;
+}
