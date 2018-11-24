@@ -1,4 +1,4 @@
 typesettings-site
 =================
 
-Source for the [Typesettings website](http://ianrose.github.io/typesettings)
+Source for the [Typesettings website](https://www.typesettings.io)
