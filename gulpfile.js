@@ -36,6 +36,7 @@ const paths = {
     this.src.libs = `${this.src.root}/js/libs/*.js`
     this.src.static = `${this.src.root}/static/**/*.*`
     this.src.CNAME = `${this.src.root}/CNAME`
+    this.src._redircts = `${this.src.root}/_redirects`
     this.src.files = `${this.src.root}/*.{html,txt,xml}`
     this.dist.css = `${this.dist.root}/css`
     this.dist.static = `${this.dist.root}/static`
@@ -156,7 +157,7 @@ gulp.task('copy:static', function () {
 
 // Copy Static HTML and TXT
 gulp.task('copy:files', function () {
-  return gulp.src([paths.src.files, paths.src.CNAME])
+  return gulp.src([paths.src.files, paths.src.CNAME, paths.src._redircts])
     .pipe(gulp.dest(paths.dist.root))
     .pipe(browserSync.reload({stream: true}))
 })
