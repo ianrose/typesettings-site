@@ -24,7 +24,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.44",
     "@babel/preset-env": "^7.0.0-beta.44",
-    "ajv": "^5.5.2",
+    "ajv": "^6.12.3",
     "babel-loader": "^8.0.0-beta.2",
     "browser-sync": "^2.7.1",
     "cross-env": "^5.2.0",
