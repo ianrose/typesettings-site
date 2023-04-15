@@ -47,7 +47,7 @@
     "gulp-watch": "^4.3.5",
     "handlebars-layouts": "^3.1.4",
     "log-utils": "^0.2.1",
-    "luxon": "^1.1.0",
+    "luxon": "^1.28.1",
     "postcss-cssnext": "^3.1.0",
     "run-sequence": "^2.2.1",
     "smooth-scroll": "^15.0.0",
