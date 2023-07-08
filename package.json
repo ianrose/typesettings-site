@@ -52,7 +52,7 @@
     "run-sequence": "^2.2.1",
     "smooth-scroll": "^15.0.0",
     "standard": "^11.0.1",
-    "stylelint": "^9.2.0",
+    "stylelint": "^15.10.1",
     "stylelint-config-standard": "^18.2.0",
     "typesettings": "^4.0.0",
     "typogr": "^0.6.8",
