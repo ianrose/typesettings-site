@@ -1,4 +1,4 @@
 typesettings-site
 =================
 
-Source for the former https://www.typesettings.io
+Source for the former typesettings.io
